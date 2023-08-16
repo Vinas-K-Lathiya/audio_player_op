@@ -3,26 +3,41 @@ import 'package:image_picker/image_picker.dart';
 List<Map<String, dynamic>> aaaudio = [
   {
     'audio': "lib/audio/audio1.mp3",
-    'image': "lib/image/1.webp",
-    'title': "teri shikayat kardu",
+    'image': "lib/image/2.webp",
+    'title': "Teri shikayat kardu",
+    'subtitle' : "Top 1"
   },
   {
     'audio': "lib/audio/audio2.mp3",
     'image': "lib/image/2.webp",
-    'title': "tu mera hero",
+    'title': "Tu mera hero",
+    'subtitle' : "World 1"
   },
   {
     'audio': "lib/audio/audio3.mp3",
     'image': "lib/image/3.jpg",
-    'title': "pata nhi",
+    'title': "Pata nhi",
+    'subtitle' : "Arji Singh"
   },
   {
     'audio': "lib/audio/audio4.mp3",
     'image': "lib/image/4.png",
-    'title': "i dont know",
+    'title': "I dont know",
+    'subtitle' : "Umran Malik"
+  },
+  {
+    'audio': "lib/audio/audio1.mp3",
+    'image': "lib/image/1.webp",
+    'title': "Teri shikayat kardu",
+    'subtitle' : "RahatFateh Alikhan"
+  },
+  {
+    'audio': "lib/audio/audio2.mp3",
+    'image': "lib/image/2.webp",
+    'title': "Tu mera hero",
+    'subtitle' : "Imran Hashmi"
   },
 ];
-
 
 class Global {
   static XFile? pic;

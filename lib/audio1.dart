@@ -22,7 +22,7 @@ class _audio1State extends State<audio1> {
     aaudio data = ModalRoute.of(context)!.settings.arguments as aaudio;
     return Scaffold(
       appBar: AppBar(
-        title: Text("audio"),
+        title: Text("Audio"),
         centerTitle: true,
       ),
       body: StreamBuilder(
@@ -30,11 +30,11 @@ class _audio1State extends State<audio1> {
         builder: (context, snapshot) => Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 2,
-              width: MediaQuery.of(context).size.width / 1.2,
+              height: MediaQuery.of(context).size.height / 2.2,
+              width: MediaQuery.of(context).size.width / 1.4,
               margin: EdgeInsets.only(top: 30),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                     image: AssetImage(
                       data.image,
@@ -42,44 +42,53 @@ class _audio1State extends State<audio1> {
                     fit: BoxFit.cover,
                   )),
             ),
-            SizedBox(
-              height: 50,
-            ),
-            Container(
-              height: 100,
-              padding: EdgeInsets.all(8),
-              width: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Center(
-                        child: Text(
-                          data.title,
-                          style: TextStyle(fontSize: 16),
-                        ),
-                      ),
-                      Text(
-                        "${snapshot.data?.inHours} : "
-                        "${snapshot.data?.inMinutes} : "
-                        "${snapshot.data?.inSeconds}",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(height: 30),
+                Center(
+                  child: Text(
+                    data.title,
+                    style: TextStyle(fontSize: 16),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                Text(
+                  "${snapshot.data?.inHours} : "
+                  "${snapshot.data?.inMinutes} : "
+                  "${snapshot.data?.inSeconds}",
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(58.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
                         onPressed: () {
                           assetsAudioPlayer.stop();
                         },
                         icon: Icon(Icons.stop),
+                      ),
+                      Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                           color: Colors.blue,
+                           borderRadius: BorderRadius.circular(10)
+                        ),
+                       
+                        child: GestureDetector(
+                          onTap: () {
+                            playAudio(data.audio);
+                          },
+                          child: Icon(
+                            Icons.play_arrow_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                       IconButton(
                         onPressed: () {
@@ -93,16 +102,10 @@ class _audio1State extends State<audio1> {
                         },
                         icon: Icon(Icons.loop),
                       ),
-                      IconButton(
-                        onPressed: () {
-                          playAudio(data.audio);
-                        },
-                        icon: Icon(Icons.play_arrow),
-                      ),
                     ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

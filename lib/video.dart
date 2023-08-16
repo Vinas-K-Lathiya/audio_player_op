@@ -16,35 +16,31 @@ class _videoState extends State<video> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
             onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => video2()));
             },
-            child: Container(
-              height: 120,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              margin: EdgeInsets.all(20),
+            child: Padding(
+              padding: EdgeInsets.only(top: 28.0),
               child: Center(
                 child: Container(
-                  height: 500,
-                  width: MediaQuery.of(context).size.width / 1.2,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                        image: AssetImage("lib/image/3.jpg"),
-                        fit: BoxFit.cover),
-                  ),
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                          image: AssetImage('lib/image/3.jpg'),
+                          fit: BoxFit.cover)),
+                  height: MediaQuery.of(context).size.height / 4.5,
+                  width: MediaQuery.of(context).size.width / 1.1,
                 ),
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
+          Padding(
+            padding:  EdgeInsets.only(bottom:38.0),
             child: GestureDetector(
               onTap: () async {
                 final XFile? image =
