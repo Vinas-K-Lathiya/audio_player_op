@@ -19,7 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ![Screenshot_2023-08-16-22-22-58-15_7ba3ae2d7fe6b9b841e3f12fb8801f7c](https://github.com/Vinas-K-Lathiya/audio_player_op/assets/118763065/f4c062ab-0b98-4442-b61b-0d582f5e15e1)
 
-![Screenshot_2023-08-16-22-22-58-15_7ba3ae2d7fe6b9b841e3f12fb8801f7c](https://github.com/Vinas-K-Lathiya/audio_player_op/assets/118763065/e700d91c-b9ee-4c48-9fac-709d02fde175)
+![Screenshot_2023-08-17-17-07-17-28_7ba3ae2d7fe6b9b841e3f12fb8801f7c](https://github.com/Vinas-K-Lathiya/audio_player_op/assets/118763065/573826b3-8df8-49ca-9733-1864638ddca3)
 
 
 ![Screenshot_2023-08-16-22-23-04-03_7ba3ae2d7fe6b9b841e3f12fb8801f7c](https://github.com/Vinas-K-Lathiya/audio_player_op/assets/118763065/0d4a3483-f8ce-4474-8cb3-dc9ac7c1d4c9)
